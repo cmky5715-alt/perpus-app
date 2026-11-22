@@ -2,17 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
-    use HasFactory;
-
-    protected $fillable = ['nama', 'nis_nim', 'no_hp'];
-
-    public function loans()
-    {
-        return $this->hasMany(Loan::class);
-    }
+    protected $fillable = [
+        'nis_nim',
+        'nama',
+        'no_hp',
+        'foto',
+    ];
 }
